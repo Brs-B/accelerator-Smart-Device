@@ -1,0 +1,14 @@
+.button {
+  display: inline-flex;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}

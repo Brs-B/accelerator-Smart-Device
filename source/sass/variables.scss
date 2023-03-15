@@ -13,7 +13,7 @@ $color-transparent: rgba(255, 255, 255, 0);
 
 // Gradient
 
-$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$header-gradient: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
 // Typography
 
@@ -37,7 +37,7 @@ $font-size-desktop: 80px;
 
 $line-height-tiny: 14px;
 $line-height-small: 16px;
-$line-height-mini: 19px;
+$line-height-mini: 18px;
 $line-height-default: 22px;
 $line-height-normal: 25px;
 $line-height-average: 30px;

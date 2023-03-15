@@ -14,8 +14,45 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+              <a href="index.html">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/svg/logo-smart-device.svg">
+                  <img class="menu__logo" src="img/svg/logo-smart-device-mobile.svg" alt="Smart Device логотип">
+                </picture>
+                <div class="header__logo">
+                  <span>
+                    Smart Device
+                  </span>
+                  <span>
+                    умные технологии
+                  </span>
+                </div>
+              </a>
+              <div class="header__contacts">
+                <a href="mailto:info@sd.ru" aria-label="Почта Smart Device.">
+                  <svg class="header__contacts-svg" width="20" height="20">
+                    <use href="img/sprite.svg#icon-email"></use>
+                  </svg>
+                  <span>
+                    info@sd.ru
+                  </span>
+                </a>
+                <a href="tel:+74950005252" aria-label="Телефон Smart Device.">
+                  <svg class="header__contacts-svg" width="20" height="20">
+                    <use href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <span>
+                    +7 (495) 000 52 52
+                  </span>
+                </a>
+              </div>
+              <button class="header__button button" type="button">Заказать звонок</button>
+            </div>
+          </nav>
+        </div>
       </header>
       <main>
         <section class="intro">
