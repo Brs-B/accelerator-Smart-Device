@@ -2,6 +2,10 @@
   background: $header-gradient;
   padding: 0;
   margin: 0;
+
+  @include vp-767 {
+    padding: 0 25px;
+  }
 }
 
 .header__wrapper {
@@ -36,34 +40,9 @@
 }
 
 .header__logo {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 145px;
-  margin-left: 15px;
-
   @include vp-767 {
     display: none;
   }
-}
-
-.header__logo span {
-  padding-top: 3px;
-}
-
-.header__logo span:first-child {
-  font-family: $ff-roboto-condensed;
-  font-size: $font-size-big;
-  line-height: $line-height-average;
-  font-weight: $font-weight-bold;
-  color: $color-font-white;
-}
-
-.header__logo span:last-child {
-  font-family: $ff-roboto;
-  font-size: $font-size-tiny;
-  line-height: $line-height-tiny;
-  color: rgba($color: $color-default-white, $alpha: 0.7);
 }
 
 .header__contacts {
