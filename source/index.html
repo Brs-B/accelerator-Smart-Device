@@ -20,7 +20,7 @@
             <a href="index.html">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/svg/logo-smart-device.svg">
-                <img class="menu__logo" src="img/svg/logo-smart-device-mobile.svg" alt="Smart Device логотип">
+                <img src="img/svg/logo-smart-device-mobile.svg" alt="Smart Device логотип">
               </picture>
               <div class="header__logo logo">
                 <span>
@@ -54,8 +54,31 @@
         </div>
       </header>
       <main>
-        <section class="intro">
-          <div class="container"></div>
+        <h1 class="visually-hidden">
+          Smart Device - компания по производству печатных плат
+        </h1>
+        <section class="main-block">
+          <div class="main-block__background">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/main-block-background-desktop.jpg 1x, img/main-block-background-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-block-background-tablet.jpg 1x, img/main-block-background-tablet@2x.jpg 2x">
+              <img src="img/main-block-background-mobile.jpg" srcset="img/main-block-background-mobile@2x.jpg 2x" alt="Фон с печатной платой">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="main-block__text">
+              <h2>
+                Печатные платы
+              </h2>
+              <p>
+                производство и монтаж, поставка комплектующих, блоков и модулей
+              </p>
+              <a href="#" aria-label="Ссылка на бесплатную консультацию">
+                <span class="main-block__link main-block__link--tablet">Получить бесплатную консультацию</span>
+                <span class="main-block__link main-block__link--mobile">Бесплатная консультация</span>
+              </a>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="footer">

@@ -1,0 +1,128 @@
+.main-block {
+  position: relative;
+  overflow: hidden;
+  background-color: $color-black-pearl;
+}
+
+.main-block__background img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.main-block__text {
+  position: relative;
+  z-index: 3;
+  padding-top: 302px;
+  margin-left: 125px;
+  margin-bottom: 280px;
+
+  @include vp-1023 {
+    padding-top: 179px;
+    margin-left: 0;
+    margin-bottom: 205px;
+  }
+
+  @include vp-767 {
+    padding-top: 150px;
+    margin: 0 25px;
+    margin-bottom: 190px;
+  }
+}
+
+.main-block__text h2 {
+  font-family: $ff-roboto-condensed;
+  font-size: $font-size-desktop;
+  line-height: $line-height-desktop;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-font-white;
+  margin: 0;
+  margin-bottom: 35px;
+  width: 720px;
+
+  @include vp-1023 {
+    width: fit-content;
+    font-size: $font-size-tablet;
+    line-height: $line-height-tablet;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    text-align: center;
+    font-size: $font-size-huge;
+    line-height: $line-height-big;
+    margin-bottom: 5px;
+  }
+
+  @include vp-374 {
+    text-align: start;
+  }
+}
+
+.main-block__text p {
+  font-family: $ff-pt-mono;
+  font-size: $font-size-more;
+  line-height: $line-height-more;
+  color: $color-font-white;
+  max-width: 685px;
+  margin: 0;
+  margin-bottom: 46px;
+
+  @include vp-1023 {
+    margin-bottom: 57px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 45px;
+    text-align: center;
+    font-size: $font-size-small;
+    line-height: $line-height-default;
+  }
+
+  @include vp-374 {
+    text-align: start;
+  }
+}
+
+.main-block__text a {
+  display: inline-block;
+  padding: 17px 30px;
+  font-family: $ff-roboto-condensed;
+  font-size: $font-size-normal;
+  line-height: $line-height-default;
+  font-weight: $font-weight-bold;
+  color: $color-font-white;
+  background-color: $color-sky-blue;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  @include vp-1023 {
+    margin-left: 46px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-left: 0;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    padding: 12px 0;
+  }
+}
+
+.main-block__link--tablet {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.main-block__link--mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
