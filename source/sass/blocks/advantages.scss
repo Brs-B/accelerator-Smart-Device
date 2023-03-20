@@ -1,0 +1,135 @@
+.advantages__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 120px;
+  margin-bottom: 120px;
+  gap: 30px;
+
+  @include vp-1023 {
+    padding-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 25px;
+  }
+}
+
+.advantages__block {
+  max-width: 595px;
+  min-width: 497px;
+  height: 300px;
+  flex: 1;
+  width: fit-content;
+  border: 1px solid $color-border;
+  padding-left: 40px;
+  padding-right: 44px;
+  border-left: 5px solid $color-sky-blue;
+
+  @include vp-1023 {
+    height: 360px;
+    min-width: 321px;
+    padding-right: 30px;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    min-height: 325px;
+    min-width: 270px;
+    padding-left: 25px;
+  }
+}
+
+.advantages__block svg {
+  display: block;
+  fill: $color-sky-blue;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  @include vp-1023 {
+    margin-top: 39px;
+    margin-bottom: 14px;
+  }
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 14px;
+  }
+}
+
+.advantages__block h3 {
+  font-family: $ff-roboto-condensed;
+  font-size: $font-size-tall;
+  line-height: $line-height-more;
+  font-weight: $font-weight-regular;
+  color: $color-sky-blue;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+  }
+
+  @include vp-767 {
+    font-size: $font-size-average;
+    line-height: $line-height-solid;
+    margin-bottom: 10px;
+  }
+}
+
+.advantages__block p {
+  font-family: $ff-pt-mono;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  color: $color-black-pearl;
+  margin: 0;
+  margin-bottom: 35px;
+
+  @include vp-1023 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    font-size: $font-size-small;
+    line-height: $line-height-standart;
+    min-height: 140px;
+    margin-bottom: 35px;
+  }
+}
+
+.advantages__block:nth-child(1) p {
+  @include vp-767 {
+    margin-bottom: 74px;
+  }
+}
+
+.advantages__block:nth-child(2) p {
+  @include vp-767 {
+    margin-bottom: 55px;
+  }
+}
+
+.advantages__block:hover,
+.advantages__block:focus {
+  background-color: $color-sky-blue;
+  border: 1px solid $color-sky-blue;
+  padding-left: 44px;
+}
+
+.advantages__block:hover svg,
+.advantages__block:focus svg {
+  fill: $color-font-white;
+}
+
+.advantages__block:hover h3,
+.advantages__block:focus h3,
+.advantages__block:hover p,
+.advantages__block:focus p {
+  color: $color-font-white;
+}

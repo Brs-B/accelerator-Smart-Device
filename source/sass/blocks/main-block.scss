@@ -16,7 +16,7 @@
   z-index: 3;
   padding-top: 302px;
   margin-left: 125px;
-  margin-bottom: 280px;
+  margin-bottom: 279px;
 
   @include vp-1023 {
     padding-top: 179px;
@@ -31,7 +31,7 @@
   }
 }
 
-.main-block__text h2 {
+.main-block__text h3 {
   font-family: $ff-roboto-condensed;
   font-size: $font-size-desktop;
   line-height: $line-height-desktop;
