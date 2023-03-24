@@ -9,13 +9,16 @@
 
   @include vp-1023 {
     padding-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 73px;
   }
 
   @include vp-767 {
     flex-direction: column;
     align-items: center;
-    padding: 50px 25px;
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 47px;
   }
 }
 
@@ -24,7 +27,6 @@
   min-width: 497px;
   height: 300px;
   flex: 1;
-  width: fit-content;
   border: 1px solid $color-border;
   padding-left: 40px;
   padding-right: 44px;
@@ -32,15 +34,20 @@
 
   @include vp-1023 {
     height: 360px;
-    min-width: 321px;
+    max-width: 500px;
+    min-width: 319px;
     padding-right: 30px;
     margin-bottom: 0;
   }
 
   @include vp-767 {
     min-height: 325px;
-    min-width: 270px;
+    width: 100%;
     padding-left: 25px;
+  }
+
+  @include vp-374 {
+    min-width: 270px;
   }
 }
 
@@ -120,6 +127,10 @@
   background-color: $color-sky-blue;
   border: 1px solid $color-sky-blue;
   padding-left: 44px;
+
+  @include vp-767 {
+    padding-left: 29px;
+  }
 }
 
 .advantages__block:hover svg,

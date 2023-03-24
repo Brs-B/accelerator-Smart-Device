@@ -77,13 +77,9 @@
 
   @include vp-767 {
     margin-bottom: 45px;
-    text-align: center;
+    text-align: start;
     font-size: $font-size-small;
     line-height: $line-height-default;
-  }
-
-  @include vp-374 {
-    text-align: start;
   }
 }
 
