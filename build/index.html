@@ -76,10 +76,10 @@
               <p>
                 производство и монтаж, поставка комплектующих, блоков и модулей
               </p>
-              <a href="#" aria-label="Ссылка на бесплатную консультацию">
+              <button class="main-block__button button" type="button" aria-label="Ссылка на бесплатную консультацию">
                 <span class="main-block__link main-block__link--tablet">Получить бесплатную консультацию</span>
                 <span class="main-block__link main-block__link--mobile">Бесплатная консультация</span>
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -170,16 +170,19 @@
           </div>
         </section>
         <section class="products">
+          <h2 class="visually-hidden">
+            Продукция
+          </h2>
           <div class="container">
             <div class="products__wrapper">
-              <h2>
+              <h3>
                 <span class="products__title products__title--tablet">
                   Smart Device предлагает следующие товары и услуги
                 </span>
                 <span class="products__title products__title--mobile">
                   Товары и услуги Smart Device
                 </span>
-              </h2>
+              </h3>
               <div class="products__list">
                 <a href="#">
                   <picture>
@@ -187,7 +190,9 @@
                     <source media="(min-width: 768px)" srcset="img/card-background-1-tablet.jpg 1x, img/card-background-1-tablet@2x.jpg 2x">
                     <img src="img/card-background-1-mobile.jpg" srcset="img/card-background-1-mobile@2x.jpg 2x" alt="Производство">
                   </picture>
-                  <span>Производство печатных плат</span>
+                  <span>
+                    Производство печатных плат
+                  </span>
                   <div class="products__icon">
                     <svg width="5" height="10">
                       <use href="img/sprite.svg#icon-arrow"></use>
@@ -200,7 +205,9 @@
                     <source media="(min-width: 768px)" srcset="img/card-background-2-tablet.jpg 1x, img/card-background-2-tablet@2x.jpg 2x">
                     <img src="img/card-background-2-mobile.jpg" srcset="img/card-background-2-mobile@2x.jpg 2x" alt="Монтаж">
                   </picture>
-                  <span>Монтаж печатных плат</span>
+                  <span>
+                    Монтаж печатных плат
+                  </span>
                   <div class="products__icon">
                     <svg width="5" height="10">
                       <use href="img/sprite.svg#icon-arrow"></use>
@@ -213,13 +220,54 @@
                     <source media="(min-width: 768px)" srcset="img/card-background-3-tablet.jpg 1x, img/card-background-3-tablet@2x.jpg 2x">
                     <img src="img/card-background-3-mobile.jpg" srcset="img/card-background-3-mobile@2x.jpg 2x" alt="Комплектующие">
                   </picture>
-                  <span>Комплектующие для светотехники</span>
+                  <span>
+                    Комплектующие для светотехники
+                  </span>
                   <div class="products__icon">
                     <svg width="5" height="10">
                       <use href="img/sprite.svg#icon-arrow"></use>
                     </svg>
                   </div>
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="callback">
+          <h2 class="visually-hidden">
+            Бесплатная консультация
+          </h2>
+          <div class="container">
+            <div class="callback__wrapper">
+              <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285" alt="Бумажный самолет">
+              <div class="callback__form-wrapper">
+                <h3>
+                  Остались вопросы? Задайте их нам!
+                </h3>
+                <p>
+                  Мы проконсультируем Вас бесплатно
+                </p>
+                <form class="callback__form">
+                  <input class="callback__form-input" type="text" id="name" name="name" placeholder="Имя" aria-label="Напишите ваше имя." required>
+                  <label for="name"></label>
+                  <input class="callback__form-input" type="tel" id="phonenumber" name="phonenumber" placeholder="Телефон" aria-label="Напишите ваш телефон.">
+                  <label for="phonenumber"></label>
+                  <textarea class="callback__form-textarea" id="question" name="question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
+                  <label class="callback__form-agreement" for="agreement">
+                    <input class="callback__form-input visually-hidden" type="checkbox" id="agreement" name="agreement" aria-label="Согласие на обработку данных." checked>
+                    <span class="callback__form-checkbox">
+                    </span>
+                    <svg class="callback__form-svg" width="15" height="15">
+                      <use href="img/sprite.svg#icon-checked"></use>
+                    </svg>
+                    <span class="callback__agreement-text">
+                      Я согласен на обработку  персональных данных
+                    </span>
+                  </label>
+                  <button class="callback-form__button button" type="submit" aria-label="Отправить заявку.">
+                    Задать вопрос
+                  </button>
+                </form>
               </div>
             </div>
           </div>

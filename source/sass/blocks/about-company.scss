@@ -58,12 +58,7 @@
   line-height: $line-height-default;
   color: $color-black-pearl;
   margin: 0;
-  text-align: justify;
-  letter-spacing: 0.03em;
-
-  @include vp-1023 {
-    text-align: start;
-  }
+  letter-spacing: 0.04em;
 
   @include vp-767 {
     font-size: $font-size-small;

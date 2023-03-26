@@ -1,0 +1,250 @@
+.callback {
+  position: relative;
+  background-color: $color-sky-blue;
+}
+
+.callback::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 51%;
+  height: 100%;
+  background-color: $color-black-pearl-opacity;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  z-index: 0;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.callback__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 165px;
+  padding-bottom: 249px;
+  margin-right: 12px;
+
+  @include vp-1023 {
+    padding-top: 50px;
+    padding-bottom: 125px;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    padding: 0 25px;
+    padding-top: 47px;
+    padding-bottom: 87px;
+  }
+}
+
+.callback__wrapper img {
+  position: relative;
+  width: 510px;
+  height: 285px;
+  margin-top: 81px;
+  z-index: 1;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.callback__form-wrapper {
+  max-width: 580px;
+  min-width: 270px;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+
+  @include vp-1023 {
+    max-width: max-content;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    max-width: 718px;
+  }
+}
+
+.callback__form-wrapper h3 {
+  font-family: $ff-roboto-condensed;
+  font-size: $font-size-huge;
+  line-height: $line-height-mega;
+  font-weight: $font-weight-regular;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+  }
+
+  @include vp-767 {
+    font-size: $font-size-ultra;
+    line-height: $line-height-big;
+    margin-right: 0;
+  }
+}
+
+.callback__form-wrapper p {
+  font-family: $ff-pt-mono;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 33px;
+
+  @include vp-1023 {
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: $font-size-small;
+    line-height: $line-height-standart;
+    margin-bottom: 35px;
+  }
+}
+
+.callback__form {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.callback__form-input {
+  width: 275px;
+  min-width: 200px;
+  flex: 1;
+  border: none;
+  overflow: auto;
+  font-family: $ff-pt-mono;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  background-color: $color-callback-background;
+  border-radius: 3px;
+  padding: 14px;
+  margin-bottom: 20px;
+  color: $color-default-white;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.callback__form-input[type="text"] {
+  margin-right: 30px;
+
+  @include vp-767 {
+    margin-right: 0;
+  }
+}
+
+.callback__form-textarea {
+  width: 100%;
+  height: 155px;
+  border: none;
+  resize: none;
+  overflow: auto;
+  padding: 25px 15px;
+  font-family: $ff-pt-mono;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  background-color: $color-callback-background;
+  color: $color-default-white;
+  border-radius: 3px;
+  margin-bottom: 33px;
+
+  @include vp-1023 {
+    padding: 30px 15px;
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    height: 180px;
+    padding: 25px 15px;
+    margin-bottom: 30px;
+  }
+}
+
+.callback__form-textarea::placeholder,
+.callback__form-input::placeholder {
+  color: $color-default-white;
+}
+
+.callback__form-agreement {
+  display: flex;
+  order: 1;
+  cursor: pointer;
+  max-width: 260px;
+  padding-top: 15px;
+
+  @include vp-767 {
+    margin-left: 5px;
+  }
+}
+
+.callback__form-checkbox {
+  width: 15px;
+  height: 15px;
+  margin-top: 7px;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.callback__form-svg {
+  display: none;
+}
+
+.callback__form-input[type="checkbox"]:checked ~ .callback__form-checkbox {
+  display: none;
+}
+
+.callback__form-input[type="checkbox"]:checked ~ .callback__form-svg {
+  display: block;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.callback__agreement-text {
+  font-family: $ff-pt-mono;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  color: $color-default-white;
+  margin-left: 11px;
+}
+
+.callback-form__button {
+  padding: 12px 25px;
+  max-width: 265px;
+  flex: 1;
+  font-family: $ff-roboto-condensed;
+  font-size: $font-size-default;
+  line-height: $line-height-standart;
+  font-weight: $font-weight-bold;
+  color: $color-default-white;
+  background-color: $color-black-pearl;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid $color-sky-blue;
+  border-radius: 3px;
+  margin-right: 50px;
+
+  @include vp-767 {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
