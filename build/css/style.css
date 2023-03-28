@@ -773,7 +773,7 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 35px;
+  padding-top: 50px;
   padding-bottom: 55px;
 }
 
@@ -878,16 +878,12 @@ button,
   display: none;
 }
 
-.nav--nojs .nav__list {
-  display: block;
-}
-
 .contacts {
   margin-right: 30px;
 }
 
 .contacts--closed .contacts__toggle::before,
-.contatcs--opened .contacts__toggle::before {
+.contacts--opened .contacts__toggle::before {
   position: absolute;
   content: "";
   width: 16px;
@@ -932,11 +928,12 @@ button,
   margin-bottom: 0;
 }
 
-.contacts__item span {
+.contacts__item p {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 
 .contacts__item a {
@@ -948,10 +945,6 @@ button,
 
 .contacts--nojs .contacts__toggle {
   display: none;
-}
-
-.contacts--nojs .contacts__list {
-  display: block;
 }
 
 .accordion h2 {
@@ -1318,7 +1311,7 @@ button,
   background-color: #00b2ff;
 }
 
-.callback:before {
+.callback::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1755,125 +1748,6 @@ button,
 
 .custom-input .input-message.is-valid,
 .custom-textarea .input-message.is-valid {
-  color: #15ab07;
-}
-
-.custom-toggle {
-  position: relative;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 300;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 500px;
-  padding: 14px 0 10px 36px;
-}
-
-.custom-toggle:last-of-type {
-  padding: 14px 0 58px 36px;
-}
-
-.custom-toggle input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-}
-
-.custom-toggle label {
-  position: relative;
-  padding-left: 52px;
-  cursor: pointer;
-}
-
-.custom-toggle label span {
-  margin-bottom: 0;
-  margin-left: 0;
-}
-
-.custom-toggle--checkbox .custom-toggle__icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28px;
-  height: 28px;
-  border: 1.5px solid #2c39f2;
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
-}
-
-.custom-toggle--checkbox .custom-toggle__icon::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(44, 57, 242, 0);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-}
-
-.custom-toggle--radio .custom-toggle__icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28px;
-  height: 28px;
-  border: 1px solid #2c39f2;
-  border-radius: 50%;
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
-}
-
-.custom-toggle--radio .custom-toggle__icon::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  color: rgba(255, 255, 255, 0);
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.custom-toggle input:checked + .custom-toggle__icon {
-  border: 1.5px solid #2c39f2;
-}
-
-.custom-toggle input:checked + .custom-toggle__icon::before {
-  background-color: #2c39f2;
-}
-
-.custom-toggle.is-invalid label span {
-  color: #ff1553;
-}
-
-.custom-toggle .input-message {
-  position: absolute;
-  right: 0;
-  bottom: -5px;
-}
-
-.custom-toggle .input-message.is-invalid {
-  color: #ff0000;
-}
-
-.custom-toggle .input-message.is-valid {
   color: #15ab07;
 }
 
@@ -2347,6 +2221,10 @@ button,
     margin-bottom: 81px;
   }
 
+  .about-company__wrapper img {
+    margin-top: 7px;
+  }
+
   .about-company__text h2 {
     margin-bottom: 14px;
   }
@@ -2400,7 +2278,7 @@ button,
     right: 0;
   }
 
-  .callback:before {
+  .callback::before {
     display: none;
   }
 
@@ -2471,6 +2349,7 @@ button,
   }
 
   .footer__wrapper {
+    padding-top: 35px;
     padding-bottom: 35px;
   }
 
@@ -2517,6 +2396,10 @@ button,
     max-width: 100%;
   }
 
+  .nav--nojs .nav__list {
+    display: block;
+  }
+
   .contacts {
     margin-right: 0;
   }
@@ -2526,16 +2409,21 @@ button,
   }
 
   .contacts__list {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
   }
 
-  .contacts__item span {
+  .contacts__item p {
     font-size: 14px;
     line-height: 18px;
+    margin-bottom: 10px;
   }
 
   .contacts__item a {
     font-size: 14px;
+  }
+
+  .contacts--nojs .contacts__list {
+    display: block;
   }
 
   .accordion {
@@ -2841,15 +2729,6 @@ button,
   .custom-input__error,
   .custom-textarea__error {
     bottom: 20px;
-  }
-
-  .custom-toggle {
-    padding: 14px 0 10px 0;
-    width: 100%;
-  }
-
-  .custom-toggle:last-of-type {
-    padding: 14px 0 58px 0;
   }
 
   .custom-select {

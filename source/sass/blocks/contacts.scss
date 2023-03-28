@@ -17,7 +17,7 @@
 }
 
 .contacts--closed .contacts__toggle::before,
-.contatcs--opened .contacts__toggle::before {
+.contacts--opened .contacts__toggle::before {
   position: absolute;
   content: "";
   width: 16px;
@@ -45,7 +45,7 @@
   column-gap: 30px;
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
   }
 }
 
@@ -58,15 +58,17 @@
   margin-bottom: 0;
 }
 
-.contacts__item span {
+.contacts__item p {
   font-family: $ff-pt-mono;
   font-size: $font-size-default;
   line-height: $line-height-default;
   color: rgba($color: $color-default-white, $alpha: 0.7);
+  margin: 0;
 
   @include vp-767 {
     font-size: $font-size-small;
     line-height: $line-height-mini;
+    margin-bottom: 10px;
   }
 }
 
@@ -86,5 +88,7 @@
 }
 
 .contacts--nojs .contacts__list {
-  display: block;
+  @include vp-767 {
+    display: block;
+  }
 }

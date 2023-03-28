@@ -14,14 +14,24 @@ accordionToggleNav.addEventListener('click', function () {
     nav.classList.add('nav--closed');
     nav.classList.remove('nav--opened');
   }
+
+  if (contacts.classList.contains('contacts--opened')) {
+    contacts.classList.remove('contacts--opened');
+    contacts.classList.add('contacts--closed');
+  }
 });
 
 accordionToggleContacts.addEventListener('click', function () {
   if (contacts.classList.contains('contacts--closed')) {
     contacts.classList.remove('contacts--closed');
-    contacts.classList.add('contatcs--opened');
+    contacts.classList.add('contacts--opened');
   } else {
     contacts.classList.add('contacts--closed');
-    contacts.classList.remove('contatcs--opened');
+    contacts.classList.remove('contacts--opened');
+  }
+
+  if (nav.classList.contains('nav--opened')) {
+    nav.classList.remove('nav--opened');
+    nav.classList.add('nav--closed');
   }
 });

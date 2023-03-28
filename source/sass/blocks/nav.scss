@@ -88,5 +88,7 @@
 }
 
 .nav--nojs .nav__list {
-  display: block;
+  @include vp-767 {
+    display: block;
+  }
 }

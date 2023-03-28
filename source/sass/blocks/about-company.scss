@@ -17,6 +17,10 @@
 .about-company__wrapper img {
   height: fit-content;
 
+  @include vp-1023 {
+    margin-top: 7px;
+  }
+
   @include vp-767 {
     display: none;
   }
