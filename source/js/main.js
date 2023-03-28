@@ -5,6 +5,7 @@ import {Form} from './modules/form-validate/form';
 import './utils/accordion';
 import './utils/text-expand';
 import './utils/smooth-scroll';
+import './utils/modal';
 
 // ---------------------------------
 

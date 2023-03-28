@@ -34,6 +34,10 @@ body {
   background-color: $color-default-white;
 }
 
+body.locked {
+  overflow: hidden;
+}
+
 a {
   color: $color-default-black;
   text-decoration: none;
