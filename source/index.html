@@ -139,7 +139,7 @@
         <section class="about-company">
           <div class="container">
             <div class="about-company__wrapper">
-              <img src="img/2022.png" srcset="img/2022@2x.png 2x" alt="2022 год">
+              <img src="img/2022.png" srcset="img/2022@2x.png 2x" width="150" height="320" alt="2022 год">
               <div class="about-company__text">
                 <h2>
                   О компании
@@ -248,13 +248,17 @@
                   Мы проконсультируем Вас бесплатно
                 </p>
                 <form class="callback__form" action="#" method="post">
-                  <input class="callback__form-input" type="text" id="name" name="name" placeholder="Имя" aria-label="Напишите ваше имя." required>
-                  <label for="name"></label>
-                  <input data-validate-type="phone" data-on-input-validate="data-on-input-validate" class="callback__form-input" type="tel" id="phonenumber" name="phonenumber" placeholder="Телефон" aria-label="Напишите ваш телефон.">
-                  <label for="phonenumber"></label>
-                  <textarea class="callback__form-textarea" id="question" name="question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
+                  <div class="callback__form-block callback__form-block--text" data-validate-type="text" data-limitation="name">
+                    <input type="text" id="name" name="name" placeholder="Имя" aria-label="Напишите ваше имя." required>
+                    <label for="name"></label>
+                  </div>
+                  <div class="callback__form-block" data-validate-type="phone" data-on-input-validate="data-on-input-validate">
+                    <input type="tel" id="phonenumber" name="phonenumber" placeholder="Телефон" aria-label="Напишите ваш телефон.">
+                    <label for="phonenumber"></label>
+                  </div>
+                  <textarea id="question" name="question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
                   <label class="callback__form-agreement" for="agreement">
-                    <input class="callback__form-input visually-hidden" type="checkbox" id="agreement" name="agreement" aria-label="Согласие на обработку данных." checked>
+                    <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" aria-label="Согласие на обработку данных." checked>
                     <span class="callback__form-checkbox">
                     </span>
                     <svg class="callback__form-svg" width="15" height="15">
@@ -278,7 +282,7 @@
           <div class="footer__wrapper">
             <div class="footer__socials socials">
               <a href="index.html">
-                <img src="img/svg/logo-smart-device.svg" alt="Smart Device логотип">
+                <img src="img/svg/logo-smart-device.svg" width="55" height="55" alt="Smart Device логотип">
                 <div class="footer__logo logo">
                   <span>
                     Smart Device
@@ -405,7 +409,7 @@
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
           <form class="modal__form" action="#" method="post">
-            <div class="modal__form-block">
+            <div class="modal__form-block" data-validate-type="text" data-limitation="name">
               <input class="modal__form-input" type="text" id="modal-name" name="modal-name" placeholder="Имя" aria-label="Напишите ваше имя." required>
               <label for="modal-name"></label>
             </div>
@@ -413,7 +417,7 @@
               <input class="modal__form-input" type="tel" id="modal-phonenumber" name="modal-phonenumber" placeholder="Телефон" aria-label="Напишите ваш телефон." required>
               <label for="modal-phonenumber"></label>
             </div>
-            <textarea class="modal__form-textarea" id="question" name="question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
+            <textarea class="modal__form-textarea" id="modal-question" name="modal-question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
             <button class="modal-form__button button" type="submit" aria-label="Отправить заявку.">
               Отправить
             </button>

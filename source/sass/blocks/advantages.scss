@@ -36,18 +36,26 @@
     height: 360px;
     max-width: 500px;
     min-width: 319px;
-    padding-right: 30px;
+    padding-right: 35px;
     margin-bottom: 0;
   }
 
   @include vp-767 {
-    min-height: 325px;
     width: 100%;
+    max-width: 574px;
+    min-height: 340px;
     padding-left: 25px;
+    padding-right: 30px;
   }
 
   @include vp-374 {
     min-width: 270px;
+  }
+}
+
+.advantages__block:nth-of-type(n+3) {
+  @include vp-767 {
+    min-height: 325px;
   }
 }
 
@@ -64,9 +72,15 @@
 
   @include vp-767 {
     width: 30px;
-    height: 30px;
     margin-top: 30px;
+    height: 30px;
     margin-bottom: 14px;
+  }
+}
+
+.advantages__block:nth-of-type(n+3) svg {
+  @include vp-767 {
+    margin-bottom: 17px;
   }
 }
 
@@ -80,13 +94,19 @@
   margin-bottom: 15px;
 
   @include vp-1023 {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   @include vp-767 {
     font-size: $font-size-average;
     line-height: $line-height-solid;
     margin-bottom: 10px;
+  }
+}
+
+.advantages__block:nth-of-type(n+3) h3 {
+  @include vp-767 {
+    margin-bottom: 15px;
   }
 }
 
@@ -105,20 +125,6 @@
   @include vp-767 {
     font-size: $font-size-small;
     line-height: $line-height-standart;
-    min-height: 140px;
-    margin-bottom: 35px;
-  }
-}
-
-.advantages__block:nth-child(1) p {
-  @include vp-767 {
-    margin-bottom: 74px;
-  }
-}
-
-.advantages__block:nth-child(2) p {
-  @include vp-767 {
-    margin-bottom: 55px;
   }
 }
 
