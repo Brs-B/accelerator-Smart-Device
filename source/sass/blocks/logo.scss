@@ -10,17 +10,19 @@
   padding-top: 3px;
 }
 
-.logo span:first-child {
+.logo__title {
   font-family: $ff-roboto-condensed;
   font-size: $font-size-big;
   line-height: $line-height-average;
   font-weight: $font-weight-bold;
   color: $color-font-white;
+  margin: 0;
 }
 
-.logo span:last-child {
+.logo__text {
   font-family: $ff-roboto;
   font-size: $font-size-tiny;
   line-height: $line-height-tiny;
   color: rgba($color: $color-default-white, $alpha: 0.7);
+  margin: 0;
 }
