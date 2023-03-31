@@ -5,7 +5,7 @@
 
   @include vp-1023 {
     padding-top: 54px;
-    padding-bottom: 75px;
+    padding-bottom: 74px;
   }
 
   @include vp-767 {
@@ -18,13 +18,13 @@
   padding: 0 1px;
 
   @include vp-1023 {
-    width: 670px;
     margin: 0 auto;
     padding: 0;
   }
 
   @include vp-767 {
-    width: 270px;
+    min-width: 270px;
+    padding: 0 25px;
   }
 }
 
@@ -38,14 +38,15 @@
   margin-bottom: 53px;
 
   @include vp-1023 {
-    max-width: 670px;
+    min-width: 670px;
     margin-bottom: 40px;
   }
 
   @include vp-767 {
     font-size: $font-size-mega;
     line-height: $line-height-tall;
-    width: 230px;
+    min-width: 230px;
+    margin-right: 20px;
     margin-bottom: 29px;
   }
 }
@@ -83,7 +84,8 @@
   flex: 1;
 
   @include vp-1023 {
-    max-width: 670px;
+    max-width: none;
+    width: 100%;
   }
 }
 
@@ -109,6 +111,13 @@
     font-size: $font-size-normal;
     top: 25px;
     left: 30px;
+  }
+}
+
+.products__list img {
+  @include vp-1023 {
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -386,7 +386,7 @@ template {
 
 @font-face {
   font-family: "PT Mono";
-  src: url("../../fonts/pt-mono-regular.woff2") format("woff2"), url("../../fonts/pt-mono-regular.woff") format("woff");
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -394,7 +394,7 @@ template {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../fonts/roboto-medium.woff2") format("woff2"), url("../../fonts/roboto-medium.woff") format("woff");
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -402,7 +402,7 @@ template {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../../fonts/roboto-condensed-regular.woff") format("woff");
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -410,7 +410,7 @@ template {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../../fonts/roboto-condensed-bold.woff") format("woff");
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -634,9 +634,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1222px;
+  max-width: 1242px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 10px;
 }
 
 .header {
@@ -830,7 +830,7 @@ button,
   content: "";
   width: 16px;
   height: 1px;
-  left: 0;
+  right: 0;
   background-color: rgba(248, 253, 255, 0.7);
 }
 
@@ -840,6 +840,7 @@ button,
   width: 1px;
   height: 16px;
   top: 0;
+  right: 7px;
   background-color: rgba(248, 253, 255, 0.7);
 }
 
@@ -856,18 +857,18 @@ button,
   gap: 30px;
 }
 
-.nav__list {
+.nav__wrapper ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav__item {
+.nav__wrapper li {
   max-width: 220px;
   margin-bottom: 8px;
 }
 
-.nav__item a {
+.nav__wrapper a {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -888,7 +889,7 @@ button,
   content: "";
   width: 16px;
   height: 1px;
-  left: 0;
+  right: 0;
   background-color: rgba(248, 253, 255, 0.7);
 }
 
@@ -898,10 +899,11 @@ button,
   width: 1px;
   height: 16px;
   top: 0;
+  right: 7px;
   background-color: rgba(248, 253, 255, 0.7);
 }
 
-.contacts__list {
+.contacts__wrapper ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -919,12 +921,12 @@ button,
   column-gap: 30px;
 }
 
-.contacts__item {
+.contacts__wrapper li {
   max-width: 315px;
   margin-bottom: 7px;
 }
 
-.contacts__item p {
+.contacts__wrapper p {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -932,7 +934,7 @@ button,
   margin: 0;
 }
 
-.contacts__item a {
+.contacts__wrapper a {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 25px;
@@ -941,6 +943,10 @@ button,
 
 .contacts--nojs .contacts__toggle {
   display: none;
+}
+
+.accordion {
+  position: relative;
 }
 
 .accordion h2 {
@@ -1080,7 +1086,7 @@ button,
 
 .advantages__block {
   max-width: 595px;
-  min-width: 497px;
+  min-width: 487px;
   height: 300px;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1340,7 +1346,7 @@ button,
   justify-content: space-between;
   padding-top: 165px;
   padding-bottom: 249px;
-  margin-right: 12px;
+  margin-right: 2px;
 }
 
 .callback__wrapper img {
@@ -1354,7 +1360,8 @@ button,
 .callback__form-wrapper {
   max-width: 580px;
   min-width: 270px;
-  margin-left: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1414,6 +1421,7 @@ button,
   -ms-flex: 1;
   flex: 1;
   margin-bottom: 20px;
+  min-width: 200px;
 }
 
 .callback__form-block input {
@@ -1517,7 +1525,7 @@ input[type=checkbox]:checked ~ .callback__form-svg {
   margin-left: 11px;
 }
 
-.callback-form__button {
+.callback__form-button {
   padding: 12px 25px;
   max-width: 265px;
   -webkit-box-flex: 1;
@@ -1536,7 +1544,7 @@ input[type=checkbox]:checked ~ .callback__form-svg {
   letter-spacing: 0.05em;
   border: 1px solid #00b2ff;
   border-radius: 3px;
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 .modal {
@@ -1778,7 +1786,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   margin-left: 11px;
 }
 
-.modal-form__button {
+.modal__form-button {
   padding: 12px 25px;
   width: 100%;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1836,6 +1844,12 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     }
   }
 */
+
+@media (max-width: 1279px) {
+  .callback__form-wrapper {
+    margin-right: 0;
+  }
+}
 
 @media (max-width: 1023px) {
   .container {
@@ -1918,7 +1932,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     gap: 0;
   }
 
-  .nav__item {
+  .nav__wrapper li {
     margin-bottom: 7px;
   }
 
@@ -1997,17 +2011,16 @@ input[type=checkbox]:checked ~ .modal__form-svg {
 
   .products {
     padding-top: 54px;
-    padding-bottom: 75px;
+    padding-bottom: 74px;
   }
 
   .products__wrapper {
-    width: 670px;
     margin: 0 auto;
     padding: 0;
   }
 
   .products__wrapper h3 {
-    max-width: 670px;
+    min-width: 670px;
     margin-bottom: 40px;
   }
 
@@ -2023,13 +2036,19 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   }
 
   .products__list a {
-    max-width: 670px;
+    max-width: none;
+    width: 100%;
   }
 
   .products__list span {
     width: 149px;
     top: 35px;
     left: 45px;
+  }
+
+  .products__list img {
+    width: 100%;
+    height: 100%;
   }
 
   .products__icon {
@@ -2083,7 +2102,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     padding-top: 13px;
   }
 
-  .callback-form__button {
+  .callback__form-button {
     margin-right: 55px;
   }
 }
@@ -2104,6 +2123,11 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   .header__wrapper a {
     padding-top: 15px;
     padding-bottom: 20px;
+  }
+
+  .header__svg-logo {
+    width: 35px;
+    height: 35px;
   }
 
   .header__logo {
@@ -2156,7 +2180,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     right: 3px;
   }
 
-  .nav--closed .nav__list {
+  .nav--closed ul {
     display: none;
   }
 
@@ -2164,11 +2188,11 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     margin-bottom: 13px;
   }
 
-  .nav__item {
+  .nav__wrapper li {
     max-width: 100%;
   }
 
-  .nav--nojs .nav__list {
+  .nav--nojs ul {
     display: block;
   }
 
@@ -2176,25 +2200,25 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     margin-right: 0;
   }
 
-  .contacts--closed .contacts__list {
+  .contacts--closed ul {
     display: none;
   }
 
-  .contacts__list {
+  .contacts__wrapper ul {
     margin-bottom: 6px;
   }
 
-  .contacts__item p {
+  .contacts__wrapper p {
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 10px;
   }
 
-  .contacts__item a {
+  .contacts__wrapper a {
     font-size: 14px;
   }
 
-  .contacts--nojs .contacts__list {
+  .contacts--nojs ul {
     display: block;
   }
 
@@ -2225,10 +2249,10 @@ input[type=checkbox]:checked ~ .modal__form-svg {
 
   .accordion__toggle {
     display: block;
-    position: relative;
-    width: 16px;
+    position: absolute;
+    width: 100%;
     height: 16px;
-    background-color: #041827;
+    background-color: transparent;
     border: none;
     cursor: pointer;
   }
@@ -2369,13 +2393,15 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   }
 
   .products__wrapper {
-    width: 270px;
+    min-width: 270px;
+    padding: 0 25px;
   }
 
   .products__wrapper h3 {
     font-size: 28px;
     line-height: 40px;
-    width: 230px;
+    min-width: 230px;
+    margin-right: 20px;
     margin-bottom: 29px;
   }
 
@@ -2447,7 +2473,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     margin-left: 5px;
   }
 
-  .callback-form__button {
+  .callback__form-button {
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 10px;

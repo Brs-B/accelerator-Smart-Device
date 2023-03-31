@@ -27,7 +27,7 @@
   justify-content: space-between;
   padding-top: 165px;
   padding-bottom: 249px;
-  margin-right: 12px;
+  margin-right: 2px;
 
   @include vp-1023 {
     padding-top: 45px;
@@ -58,11 +58,16 @@
 .callback__form-wrapper {
   max-width: 580px;
   min-width: 270px;
-  margin-left: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1;
+
+  @include vp-1279 {
+    margin-right: 0;
+  }
 
   @include vp-1023 {
     max-width: max-content;
@@ -133,6 +138,7 @@
   display: flex;
   flex: 1;
   margin-bottom: 20px;
+  min-width: 200px;
 
   @include vp-767 {
     width: 100%;
@@ -231,7 +237,7 @@ input[type="checkbox"]:checked ~ .callback__form-svg {
   margin-left: 11px;
 }
 
-.callback-form__button {
+.callback__form-button {
   padding: 12px 25px;
   max-width: 265px;
   flex: 1;
@@ -246,7 +252,7 @@ input[type="checkbox"]:checked ~ .callback__form-svg {
   letter-spacing: 0.05em;
   border: 1px solid $color-sky-blue;
   border-radius: 3px;
-  margin-right: 20px;
+  margin-right: 0;
 
   @include vp-1023 {
     margin-right: 55px;
