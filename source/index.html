@@ -259,7 +259,7 @@
                 <source type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
                 <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285" alt="Бумажный самолет">
               </picture>
-              <div class="callback__form-wrapper" data-form-validate="data-form-validate">
+              <div class="callback__form-wrapper" data-callback="base" data-form-validate data-message-base="Сообщение">
                 <h3>
                   Остались вопросы? Задайте их нам!
                 </h3>
@@ -267,15 +267,17 @@
                   Мы проконсультируем Вас бесплатно
                 </p>
                 <form class="callback__form" action="https://echo.htmlacademy.ru" method="post">
-                  <div class="callback__form-block callback__form-block--text" data-validate-type="text" data-limitation="name">
-                    <input type="text" id="name" name="name" placeholder="Имя" aria-label="Напишите ваше имя." required>
+                  <div class="callback__form-block callback__form-block--text" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно" data-required>
+                    <input type="text" id="name" name="name" placeholder="Имя" aria-label="Напишите ваше имя.">
                     <label for="name"></label>
                   </div>
-                  <div class="callback__form-block" data-validate-type="phone" data-on-input-validate="data-on-input-validate">
+                  <div class="callback__form-block" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно" data-required>
                     <input type="tel" id="phonenumber" name="phonenumber" placeholder="Телефон" aria-label="Напишите ваш телефон.">
                     <label for="phonenumber"></label>
                   </div>
-                  <textarea id="question" name="question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
+                  <div class="callback__form-textarea" data-validate-type="text">
+                    <textarea id="question" name="question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
+                  </div>
                   <label tabindex="0" class="callback__form-agreement" for="agreement">
                     <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" aria-label="Согласие на обработку данных." checked>
                     <span class="callback__form-checkbox">
@@ -423,7 +425,7 @@
       </footer>
 
       <div class="modal modal--closed">
-        <div class="modal__window" data-form-validate="data-form-validate">
+        <div class="modal__window" data-callback="base" data-form-validate data-message-base="Сообщение">
           <button class="modal__close-button button" type="button" aria-label="Закрыть окно."></button>
           <h3>
             Закажите звонок
@@ -432,15 +434,17 @@
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="modal__form-block" data-validate-type="text" data-limitation="name">
+            <div class="modal__form-block" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно" data-required>
               <input class="modal__form-input" type="text" id="modal-name" name="modal-name" placeholder="Имя" aria-label="Напишите ваше имя." required>
               <label for="modal-name"></label>
             </div>
-            <div class="modal__form-block" data-validate-type="phone" data-on-input-validate="data-on-input-validate">
+            <div class="modal__form-block" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно" data-required>
               <input class="modal__form-input" type="tel" id="modal-phonenumber" name="modal-phonenumber" placeholder="Телефон" aria-label="Напишите ваш телефон." required>
               <label for="modal-phonenumber"></label>
             </div>
-            <textarea class="modal__form-textarea" id="modal-question" name="modal-question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
+            <div class="modal__form-block" data-validate-type="text">
+              <textarea class="modal__form-textarea" id="modal-question" name="modal-question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
+            </div>
             <button class="modal__form-button button" type="submit" aria-label="Отправить заявку.">
               Отправить
             </button>

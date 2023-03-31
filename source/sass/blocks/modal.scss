@@ -118,6 +118,22 @@
 
 .modal__form-block {
   width: 100%;
+  position: relative;
+
+  .input-message {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+
+    &.is-invalid {
+      color: rgb(153, 24, 24);
+    }
+
+    &.is-valid {
+      color: rgb(24, 124, 13);
+    }
+  }
 }
 
 .modal__form textarea {

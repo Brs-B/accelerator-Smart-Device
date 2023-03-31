@@ -4,11 +4,11 @@ let accordionToggleNav = document.querySelector('.accordion__toggle--nav');
 let accordionToggleContacts = document.querySelector('.accordion__toggle--contacts');
 
 if (nav) {
-  nav.classList.remove('.nav--nojs');
+  nav.classList.remove('nav--nojs');
 }
 
 if (contacts) {
-  contacts.classList.remove('.contacts--nojs');
+  contacts.classList.remove('contacts--nojs');
 }
 
 if (accordionToggleNav) {
