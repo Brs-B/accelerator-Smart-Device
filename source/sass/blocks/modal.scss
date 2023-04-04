@@ -159,12 +159,13 @@
 
 .modal__form-agreement {
   display: flex;
+  order: 1;
   flex-direction: row;
   flex-wrap: wrap;
   cursor: pointer;
   width: 100%;
-  padding-top: 20px;
-  margin-left: 9px;
+  margin-top: 20px;
+  padding-left: 9px;
 }
 
 .modal__form-checkbox {
@@ -173,6 +174,10 @@
   border: 1px solid $color-default-white;
   border-radius: 2px;
   flex-shrink: 0;
+}
+
+.modal__form-input[type="checkbox"] {
+  width: fit-content;
 }
 
 .modal__form-svg {
