@@ -96,7 +96,7 @@
                   Оперативные сроки
                 </h3>
                 <p>
-                  Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
+                  Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и комплектующих в&nbsp;самые короткие сроки
                 </p>
               </div>
               <div class="advantages__block">
@@ -107,7 +107,7 @@
                   Крупные поставщики
                 </h3>
                 <p>
-                  Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
+                  Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.
                 </p>
               </div>
               <div class="advantages__block">
@@ -118,7 +118,7 @@
                   Полная конфиденциальность
                 </h3>
                 <p>
-                  По желанию клиента  мы обеспечиваем полную конфиденциальность.
+                  По желанию клиента &nbsp;мы обеспечиваем полную конфиденциальность.
                 </p>
               </div>
               <div class="advantages__block">
@@ -129,7 +129,7 @@
                   Персонализация стоимости
                 </h3>
                 <p>
-                  Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
+                  Мы &nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.
                 </p>
               </div>
             </div>
@@ -250,10 +250,12 @@
           </h2>
           <div class="container container--callback">
             <div class="callback__wrapper">
-              <picture>
-                <source type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
-                <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285" alt="Бумажный самолет">
-              </picture>
+              <div class="callback__image-block">
+                <picture>
+                  <source type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
+                  <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285" alt="Бумажный самолет">
+                </picture>
+              </div>
               <div class="callback__form-wrapper" data-callback="base" data-form-validate data-message-base="Сообщение">
                 <h3>
                   Остались вопросы? Задайте их нам!
@@ -421,18 +423,19 @@
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+            <span tabindex="1" class="visually-hidden" onFocus="document.querySelector('.autofocus2').focus()"></span>
             <div class="modal__form-block" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно" data-required>
-              <input class="modal__form-input" type="text" id="modal-name" name="modal-name" placeholder="Имя" aria-label="Напишите ваше имя." required>
+              <input tabindex="2" class="modal__form-input autofocus1" type="text" id="modal-name" name="modal-name" placeholder="Имя" aria-label="Напишите ваше имя." autocomplete="off" required>
               <label for="modal-name"></label>
             </div>
             <div class="modal__form-block" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно" data-required>
-              <input class="modal__form-input" type="tel" id="modal-phonenumber" name="modal-phonenumber" placeholder="Телефон" aria-label="Напишите ваш телефон." required>
+              <input tabindex="3" class="modal__form-input" type="tel" id="modal-phonenumber" name="modal-phonenumber" placeholder="Телефон" autocomplete="off" aria-label="Напишите ваш телефон." required>
               <label for="modal-phonenumber"></label>
             </div>
             <div class="modal__form-block" data-validate-type="text">
-              <textarea class="modal__form-textarea" id="modal-question" name="modal-question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
+              <textarea tabindex="4" class="modal__form-textarea" id="modal-question" name="modal-question" placeholder="Ваш вопрос" aria-label="Задайте вопрос"></textarea>
             </div>
-            <label tabindex="0" class="modal__form-agreement" for="modal-agreement">
+            <label tabindex="5" class="modal__form-agreement" for="modal-agreement">
               <input class="modal__form-input visually-hidden" type="checkbox" id="modal-agreement" name="modal-agreement" aria-label="Согласие на обработку данных." checked>
               <span class="modal__form-checkbox">
               </span>
@@ -443,9 +446,10 @@
                 Я согласен на обработку  персональных данных
               </span>
             </label>
-            <button class="modal__form-button button" type="submit" aria-label="Отправить заявку.">
+            <button tabindex="6" class="modal__form-button button autofocus2" type="submit" aria-label="Отправить заявку.">
               Отправить
             </button>
+            <span tabindex="7" class="visually-hidden" onFocus="document.querySelector('.autofocus1').focus()"></span>
           </form>
         </div>
       </div>

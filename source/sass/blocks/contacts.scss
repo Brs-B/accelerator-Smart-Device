@@ -78,6 +78,10 @@
   @include vp-767 {
     font-size: $font-size-small;
   }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
 .contacts--nojs .contacts__toggle {

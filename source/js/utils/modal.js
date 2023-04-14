@@ -1,6 +1,7 @@
 let modal = document.querySelector('.modal');
 let body = document.querySelector('body');
 let modalButton = document.querySelector('.header__button');
+// let modalWindow = document.querySelector('.modal__window');
 let modalClose = document.querySelector('.modal__close-button');
 let inputName = document.querySelector('#modal-name');
 
@@ -36,5 +37,16 @@ if (modalClose) {
       document.removeEventListener('keydown', onEscKeydown);
     }
     body.classList.remove('locked');
+  });
+}
+
+if (modal) {
+  modal.addEventListener('click', function (evt) {
+    if (!evt.target.closest('modal__window')) {
+      modal.classList.remove('modal--opened');
+      modal.classList.add('modal--closed');
+      document.removeEventListener('keydown', onEscKeydown);
+      body.classList.remove('locked');
+    }
   });
 }

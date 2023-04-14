@@ -36,11 +36,13 @@
 
 .socials__list {
   list-style: none;
+  width: 150px;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   margin-left: 10px;
 
