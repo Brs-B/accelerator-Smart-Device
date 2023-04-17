@@ -2,6 +2,7 @@
   display: inline-flex;
   box-sizing: border-box;
   cursor: pointer;
+  user-select: none;
 
   &:disabled {
     opacity: 0.5;

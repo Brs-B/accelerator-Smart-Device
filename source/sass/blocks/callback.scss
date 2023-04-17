@@ -72,12 +72,9 @@
   }
 
   @include vp-1023 {
-    max-width: max-content;
+    max-width: none;
+    width: 100%;
     margin-left: 0;
-  }
-
-  @include vp-767 {
-    max-width: 718px;
   }
 }
 
@@ -229,8 +226,10 @@
   margin-right: 3px;
 
   @include vp-1023 {
+    max-width: none;
     padding-top: 13px;
     margin-right: 0;
+    flex: 1;
   }
 
   @include vp-767 {
@@ -259,6 +258,12 @@ input[type="checkbox"]:checked ~ .callback__form-svg {
   display: block;
   flex-shrink: 0;
   margin-top: 7px;
+}
+
+input[type="checkbox"]:focus ~ .callback__form-svg,
+input[type="checkbox"]:focus ~ .callback__form-checkbox {
+  outline: 2px solid $color-default-black;
+  outline-offset: 2px;
 }
 
 .callback__agreement-text {

@@ -762,6 +762,10 @@ button,
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button:disabled {
@@ -849,7 +853,7 @@ button,
   content: "";
   width: 16px;
   height: 1px;
-  right: 0;
+  right: 25px;
   background-color: rgba(248, 253, 255, 0.7);
 }
 
@@ -858,8 +862,8 @@ button,
   content: "";
   width: 1px;
   height: 16px;
-  top: 0;
-  right: 7px;
+  top: 20px;
+  right: 32px;
   background-color: rgba(248, 253, 255, 0.7);
 }
 
@@ -912,7 +916,7 @@ button,
   content: "";
   width: 16px;
   height: 1px;
-  right: 0;
+  right: 25px;
   background-color: rgba(248, 253, 255, 0.7);
 }
 
@@ -921,8 +925,8 @@ button,
   content: "";
   width: 1px;
   height: 16px;
-  top: 0;
-  right: 7px;
+  top: 20px;
+  right: 32px;
   background-color: rgba(248, 253, 255, 0.7);
 }
 
@@ -1554,6 +1558,12 @@ input[type=checkbox]:checked ~ .callback__form-svg {
   margin-top: 7px;
 }
 
+input[type=checkbox]:focus ~ .callback__form-svg,
+input[type=checkbox]:focus ~ .callback__form-checkbox {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
 .callback__agreement-text {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
@@ -1596,22 +1606,8 @@ input[type=checkbox]:checked ~ .callback__form-svg {
   left: 0;
   z-index: 1000;
   overflow-y: auto;
-  max-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  max-height: 100vh;
+  display: block;
   background: rgba(3, 16, 27, 0.7);
 }
 
@@ -1625,6 +1621,30 @@ input[type=checkbox]:checked ~ .callback__form-svg {
   right: 0;
   left: 0;
   overflow: hidden;
+}
+
+.modal__overlay {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .modal__window {
@@ -1645,6 +1665,7 @@ input[type=checkbox]:checked ~ .callback__form-svg {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1853,6 +1874,12 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   flex-shrink: 0;
 }
 
+input[type=checkbox]:focus ~ .modal__form-svg,
+input[type=checkbox]:focus ~ .modal__form-checkbox {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
 .modal__agreement-text {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
@@ -1951,6 +1978,16 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     position: absolute;
   }
 
+  .header__wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 215px 1fr;
+    grid-template-columns: 215px 1fr;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+
   .header__wrapper a {
     margin: 0;
     padding-top: 20px;
@@ -1959,11 +1996,14 @@ input[type=checkbox]:checked ~ .modal__form-svg {
 
   .header__contacts {
     gap: 20px;
-    width: auto;
+    width: 100%;
     margin-left: 0;
-    margin-right: 20px;
+    padding-right: 20px;
     margin-top: 20px;
     margin-bottom: 40px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
   }
 
   .header__contacts a {
@@ -2179,9 +2219,8 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   }
 
   .callback__form-wrapper {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content;
+    max-width: none;
+    width: 100%;
     margin-left: 0;
   }
 
@@ -2205,8 +2244,12 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   }
 
   .callback__form-agreement {
+    max-width: none;
     padding-top: 13px;
     margin-right: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
   }
 
   .callback__form-button {
@@ -2227,6 +2270,11 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     padding: 0 25px;
   }
 
+  .header__wrapper {
+    -ms-grid-columns: 35px 1fr;
+    grid-template-columns: 35px 1fr;
+  }
+
   .header__wrapper a {
     padding-top: 15px;
     padding-bottom: 20px;
@@ -2243,7 +2291,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   }
 
   .header__contacts {
-    margin-right: 10px;
+    padding-right: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -2260,7 +2308,6 @@ input[type=checkbox]:checked ~ .modal__form-svg {
   .footer__nav,
   .footer__contacts {
     width: 100%;
-    padding: 0 25px;
     border-top: 1px solid rgba(248, 253, 255, 0.7);
   }
 
@@ -2292,6 +2339,10 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     display: none;
   }
 
+  .nav__wrapper {
+    padding: 0 25px;
+  }
+
   .nav--opened .nav__wrapper {
     margin-bottom: 13px;
   }
@@ -2310,6 +2361,10 @@ input[type=checkbox]:checked ~ .modal__form-svg {
 
   .contacts--closed ul {
     display: none;
+  }
+
+  .contacts__wrapper {
+    padding: 0 25px;
   }
 
   .contacts__wrapper ul {
@@ -2352,6 +2407,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
 
   .accordion h2 {
     padding: 0;
+    padding-left: 25px;
     margin: 0;
   }
 
@@ -2359,7 +2415,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     display: block;
     position: absolute;
     width: 100%;
-    height: 16px;
+    height: 100%;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -2417,7 +2473,7 @@ input[type=checkbox]:checked ~ .modal__form-svg {
 
   .advantages__block {
     width: 100%;
-    max-width: 574px;
+    max-width: none;
     min-height: 340px;
     padding-left: 25px;
     padding-right: 30px;
@@ -2542,10 +2598,6 @@ input[type=checkbox]:checked ~ .modal__form-svg {
     padding: 0 25px;
     padding-top: 47px;
     padding-bottom: 89px;
-  }
-
-  .callback__form-wrapper {
-    max-width: 718px;
   }
 
   .callback__form-wrapper h3 {
