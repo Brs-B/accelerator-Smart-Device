@@ -227,12 +227,13 @@
 
   @include vp-1023 {
     max-width: none;
-    padding-top: 13px;
+    padding-top: 11px;
     margin-right: 0;
     flex: 1;
   }
 
   @include vp-767 {
+    padding-top: 15px;
     margin-left: 5px;
   }
 }
@@ -272,6 +273,14 @@ input[type="checkbox"]:focus ~ .callback__form-checkbox {
   line-height: $line-height-small;
   color: $color-default-white;
   margin-left: 11px;
+
+  @include vp-1023 {
+    align-self: center;
+  }
+
+  @include vp-767 {
+    align-self: end;
+  }
 
   @include hover-focus {
     opacity: 0.8;

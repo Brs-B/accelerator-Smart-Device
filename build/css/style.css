@@ -2243,11 +2243,17 @@ input[type=checkbox]:focus ~ .modal__form-checkbox {
 
   .callback__form-agreement {
     max-width: none;
-    padding-top: 13px;
+    padding-top: 11px;
     margin-right: 0;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+  }
+
+  .callback__agreement-text {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .callback__form-button {
@@ -2628,13 +2634,26 @@ input[type=checkbox]:focus ~ .modal__form-checkbox {
   }
 
   .callback__form-agreement {
+    padding-top: 15px;
     margin-left: 5px;
+  }
+
+  .callback__agreement-text {
+    -ms-flex-item-align: end;
+    -ms-grid-row-align: end;
+    align-self: end;
   }
 
   .callback__form-button {
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .modal__window {
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
