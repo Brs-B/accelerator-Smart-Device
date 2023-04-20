@@ -1091,7 +1091,7 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 595px;
-  min-width: 487px;
+  min-width: 475px;
   min-height: 300px;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1271,7 +1271,7 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  row-gap: 10px;
+  row-gap: 30px;
 }
 
 .products__list a {
@@ -1521,16 +1521,38 @@ button,
 }
 
 .callback__form-agreement {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
-  cursor: pointer;
   max-width: 260px;
   padding-top: 15px;
   margin-right: 3px;
+}
+
+.callback__form-agreement .input-message {
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  z-index: 10;
+}
+
+.callback__form-agreement .input-message.is-invalid {
+  color: rgb(153, 24, 24);
+}
+
+.callback__form-agreement .input-message.is-valid {
+  color: rgb(24, 124, 13);
+}
+
+.callback__form-agreement label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
 .callback__form-checkbox {
@@ -1648,7 +1670,7 @@ input[type=checkbox]:focus ~ .callback__form-checkbox {
 
 .modal__window {
   position: relative;
-  top: -19px;
+  top: 0;
   right: 8px;
   width: 500px;
   max-width: 100%;
@@ -1755,10 +1777,6 @@ input[type=checkbox]:focus ~ .callback__form-checkbox {
   color: #ffffff;
 }
 
-.modal__form input.focus-visible:focus {
-  opacity: 0.8;
-}
-
 .modal__form-block {
   width: 100%;
   position: relative;
@@ -1825,6 +1843,7 @@ input[type=checkbox]:focus ~ .callback__form-checkbox {
 }
 
 .modal__form-agreement {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1837,10 +1856,31 @@ input[type=checkbox]:focus ~ .callback__form-checkbox {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  cursor: pointer;
   width: 100%;
   margin-top: 20px;
   padding-left: 9px;
+}
+
+.modal__form-agreement .input-message {
+  position: absolute;
+  left: 10px;
+  bottom: -25px;
+  z-index: 10;
+}
+
+.modal__form-agreement .input-message.is-invalid {
+  color: rgb(153, 24, 24);
+}
+
+.modal__form-agreement .input-message.is-valid {
+  color: rgb(24, 124, 13);
+}
+
+.modal__form-agreement label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
 .modal__form-checkbox {
@@ -2176,7 +2216,6 @@ input[type=checkbox]:focus ~ .modal__form-checkbox {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    row-gap: 30px;
   }
 
   .products__list a {
@@ -2705,10 +2744,6 @@ input[type=checkbox]:focus ~ .modal__form-checkbox {
   }
 
   .callback__agreement-text:hover:not(.focus-visible) {
-    opacity: 0.8;
-  }
-
-  .modal__form input:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 

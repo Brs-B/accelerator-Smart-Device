@@ -218,9 +218,9 @@
 }
 
 .callback__form-agreement {
+  position: relative;
   display: flex;
   order: 1;
-  cursor: pointer;
   max-width: 260px;
   padding-top: 15px;
   margin-right: 3px;
@@ -236,6 +236,26 @@
     padding-top: 15px;
     margin-left: 5px;
   }
+
+  .input-message {
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    z-index: 10;
+
+    &.is-invalid {
+      color: rgb(153, 24, 24);
+    }
+
+    &.is-valid {
+      color: rgb(24, 124, 13);
+    }
+  }
+}
+
+.callback__form-agreement label {
+  display: flex;
+  cursor: pointer;
 }
 
 .callback__form-checkbox {

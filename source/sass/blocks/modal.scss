@@ -36,7 +36,7 @@
 
 .modal__window {
   position: relative;
-  top: -19px;
+  top: 0;
   right: 8px;
   width: 500px;
   max-width: 100%;
@@ -128,10 +128,6 @@
   padding: 14px;
   margin-bottom: 20px;
   color: $color-default-white;
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
 }
 
 .modal__form-block {
@@ -180,14 +176,34 @@
 }
 
 .modal__form-agreement {
+  position: relative;
   display: flex;
   order: 1;
   flex-direction: row;
   flex-wrap: wrap;
-  cursor: pointer;
   width: 100%;
   margin-top: 20px;
   padding-left: 9px;
+
+  .input-message {
+    position: absolute;
+    left: 10px;
+    bottom: -25px;
+    z-index: 10;
+
+    &.is-invalid {
+      color: rgb(153, 24, 24);
+    }
+
+    &.is-valid {
+      color: rgb(24, 124, 13);
+    }
+  }
+}
+
+.modal__form-agreement label {
+  display: flex;
+  cursor: pointer;
 }
 
 .modal__form-checkbox {
