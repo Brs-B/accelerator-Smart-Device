@@ -1467,10 +1467,6 @@ button,
   color: #ffffff;
 }
 
-.callback__form-block input.focus-visible:focus {
-  opacity: 0.8;
-}
-
 .callback__form-textarea {
   width: 100%;
 }
@@ -1489,10 +1485,6 @@ button,
   color: #ffffff;
   border-radius: 3px;
   margin-bottom: 29px;
-}
-
-.callback__form-textarea textarea.focus-visible:focus {
-  opacity: 0.8;
 }
 
 .callback__form textarea::-webkit-input-placeholder,
@@ -1678,6 +1670,9 @@ input[type=checkbox]:focus ~ .callback__form-checkbox {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 45px;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 55px;
   -webkit-transition: opacity 0.15s ease 0s, -webkit-transform 0.15s ease 0s;
   transition: opacity 0.15s ease 0s, -webkit-transform 0.15s ease 0s;
   -o-transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
@@ -1811,10 +1806,6 @@ input[type=checkbox]:focus ~ .callback__form-checkbox {
   color: #ffffff;
   border-radius: 3px;
   margin-bottom: 20px;
-}
-
-.modal__form textarea.focus-visible:focus {
-  opacity: 0.8;
 }
 
 .modal__form textarea::-webkit-input-placeholder,
@@ -2744,6 +2735,10 @@ input[type=checkbox]:focus ~ .modal__form-checkbox {
   }
 
   .callback__agreement-text:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .modal__form input:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 

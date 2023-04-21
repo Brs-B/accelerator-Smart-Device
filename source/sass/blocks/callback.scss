@@ -172,7 +172,7 @@
   padding: 14px;
   color: $color-default-white;
 
-  @include hover-focus {
+  @include hover {
     opacity: 0.8;
   }
 }
@@ -207,7 +207,7 @@
     margin-bottom: 25px;
   }
 
-  @include hover-focus {
+  @include hover {
     opacity: 0.8;
   }
 }

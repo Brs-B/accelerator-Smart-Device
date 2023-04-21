@@ -44,6 +44,9 @@
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 45px;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 55px;
   transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
   transform: scale(1);
   display: flex;
@@ -128,6 +131,10 @@
   padding: 14px;
   margin-bottom: 20px;
   color: $color-default-white;
+
+  @include hover {
+    opacity: 0.8;
+  }
 }
 
 .modal__form-block {
@@ -165,7 +172,7 @@
   border-radius: 3px;
   margin-bottom: 20px;
 
-  @include hover-focus {
+  @include hover {
     opacity: 0.8;
   }
 }
